@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>clique para exibir</p>
+    <button onclick="isColdOrHot()"> ta quente ou frio? </button>
+    <p id = "demo"></p>
+    <script>
+        function isColdOrHot(){
+            let result = "";
+            var temperatura = prompt("ta quente ou frio?");
+            switch(temperatura.toLocaleLowerCase()){
+                case("frio" || "cold"):
+                result = "ta quentao!";
+                break;
+                case ("quente"|| "hot"):
+                result= "ah mais aq em curutiba....";
+                break;
+                default:
+                result = " input invalido!";
+                break;
+
+            }
+            document.getElementById("demo").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
